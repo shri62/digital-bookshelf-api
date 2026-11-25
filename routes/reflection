@@ -1,0 +1,6 @@
+Reflection answers (very simple)
+1. Why separate routes, models, and the database connection? Each file has one job. This makes the code easy to find and fix. If I change one part, the other parts don't break. It also keeps the project neat and easy to read.
+
+2. What is the difference between PUT and PATCH? Which one is mine? PUT replaces the whole thing. PATCH changes only a small part. My PUT route is more like PATCH, because it only changes the fields I send and keeps the rest the same.
+
+3. What should I send back after a delete? A simple success message, like "Book deleted successfully". The book is gone, so there is no need to send it back. The message tells the user the delete worked. If the book isn't found, send a 404 error.
